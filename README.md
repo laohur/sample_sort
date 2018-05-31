@@ -2,7 +2,24 @@
 抽样外排序
 单机如何挑战Sort Benchmark
 
-薛昌熵
+不能上传源码，下面是主要函数
+int main() {
+
+	//generate(num);
+	//display(unsort);
+	/sampling(unsort);//
+	//singlesort(unsort, sorted);
+	//validate(sorted);
+	//maketmp();
+	//assign(unsort,tmpsort);
+	//merge(tmpsort,sorted);
+
+	printf("\n time: %I64u  \n", clock() - start);
+
+	gets(getline);
+	return 0;
+}
+
 
 21世纪时信息时代的世纪，信息的基础是计算机科学与技术，总体可以分为硬件和软件。软件的核心是程序，程序基本上等于数据结构与算法。算法主要应用在查找和排序。尤其是今年来算力的增长为大数据、机器学习、人工智能提供了基础。
 Sort Benchmark是一个排序大赛，每年全球的顶级公司都会在这上面比赛排序算法，代表着人类算力的先进水平！竞赛的任务是对100TB的文件排序，每条记录由10字节的键和100字节的数据构成。
