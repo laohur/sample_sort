@@ -5,20 +5,23 @@
 不能上传源码，下面是主要函数
 int main() {
 
-	//generate(num);
-	//display(unsort);
-	/sampling(unsort);//
-	//singlesort(unsort, sorted);
-	//validate(sorted);
-	//maketmp();
-	//assign(unsort,tmpsort);
-	//merge(tmpsort,sorted);
+	//generate(num);  //产生待排序记录文件
+	//display(unsort);  //查看
+	sampling(unsort);  //抽样，描绘轮廓
+
+	//singlesort(unsort, sorted);    //单机排序
+
+	//validate(sorted); //验证
+	//maketmp();   //产生临时大文件，两倍于源文件
+	//assign(unsort,tmpsort);  //分发排序
+	//merge(tmpsort,sorted);  //归并
 
 	printf("\n time: %I64u  \n", clock() - start);
 
-	gets(getline);
+	gets(getline);  //暂停
 	return 0;
 }
+
 
 
 21世纪时信息时代的世纪，信息的基础是计算机科学与技术，总体可以分为硬件和软件。软件的核心是程序，程序基本上等于数据结构与算法。算法主要应用在查找和排序。尤其是今年来算力的增长为大数据、机器学习、人工智能提供了基础。
@@ -59,5 +62,5 @@ http://sortbenchmark.org/上，2016年的冠军是腾讯，成绩是98.8秒排�
 对于一般的用户，硬盘数量较少，使用single()算法即可。大概花费k*rl时间，加大内存可以显著降低k，实现线性效率提升。
 对于企业用户，建议使用分布式存储，或者建设有k个磁盘阵列，使用multi()算法。每读取一条记录，都直接输出到相应分块的专属磁盘上。内存中只保留一个分块，读完之内排序，可以直接写排序完毕的文件。实现一次读完，一次写出，读完即写出，瓶颈只在于磁盘，算法几乎不耗费时间。
 
-改进：倘若sampling有大量重复记录，宜增减加结构标记重复条数。
+改进：倘若sampling有大量重复记录，宜增减加结构标记重复条数。(万一重复几亿条记录)
 缩小分块即可
